@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<h2>Specific Employee List </h2><br>
+<table>
+  <thead>
+    <th>EmplyNo</th>
+    <th>EmplyName</th>
+  </thead>
+  {% for emp in emp_list %}
+  <tr>
+    {% for em in emp %}
+    <td>{{em}}</td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
